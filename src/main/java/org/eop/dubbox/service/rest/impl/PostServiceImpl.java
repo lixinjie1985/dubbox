@@ -3,13 +3,12 @@ package org.eop.dubbox.service.rest.impl;
 import org.eop.dubbox.entity.Post;
 import org.eop.dubbox.service.rest.PostService;
 
-import com.alibaba.dubbo.config.annotation.Service;
-
 /**
  * @author lixinjie
  * @since 
  */
-@Service
+@org.springframework.stereotype.Service
+@com.alibaba.dubbo.config.annotation.Service(interfaceClass=org.eop.dubbox.service.rest.PostService.class, protocol={"rest", "dubbo"})
 public class PostServiceImpl implements PostService {
 
 	@Override

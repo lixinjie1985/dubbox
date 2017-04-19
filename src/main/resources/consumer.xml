@@ -15,5 +15,5 @@
     <dubbo:reference id="userService" interface="org.eop.dubbox.service.rest.UserService" />
     
     <!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
-	<dubbo:annotation package="org.eop.dubbo.component" />
+	<dubbo:annotation package="org.eop.dubbox.component" />
 </beans>

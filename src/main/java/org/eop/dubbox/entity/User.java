@@ -26,6 +26,10 @@ public class User implements Serializable {
 	@XmlElement(name="userAge")
 	private int age;
 	
+	public User() {
+		super();
+	}
+
 	public User(String id, String name, String sex, int age) {
 		this.id = id;
 		this.name = name;

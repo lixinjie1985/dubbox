@@ -15,12 +15,12 @@ import org.eop.dubbox.entity.User;
  * @author lixinjie
  * @since 2017-04-17
  */
-@Path("users")
+@Path("/users")
+@Consumes({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
+@Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
 public interface UserService {
 
 	@GET
-	@Path("user")
-	@Consumes({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
-	@Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
-	public User getUser(@PathParam("{id}")String id, @QueryParam("name")String name, @QueryParam("sex")@DefaultValue("男")String sex, @QueryParam("age")int age);
+	@Path("/user/{id}")
+	public User getUser(@PathParam("id")String id, @QueryParam("name")String name, @QueryParam("sex")@DefaultValue("男")String sex, @QueryParam("age")int age);
 }
