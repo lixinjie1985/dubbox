@@ -1,5 +1,6 @@
 package org.eop.dubbox.component;
 
+import org.eop.dubbox.entity.Post;
 import org.eop.dubbox.service.rest.PostService;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +16,7 @@ public class PostComponent {
 	@Reference
 	private PostService postService;
 	
-	public void getCmp() {
-		System.out.println(postService.getPost("3030", "开发人员"));
+	public Post getCmp(String id, String name) {
+		return postService.getPost(id, name);
 	}
 }

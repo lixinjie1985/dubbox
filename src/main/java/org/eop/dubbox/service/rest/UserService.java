@@ -17,7 +17,7 @@ import org.eop.dubbox.entity.User;
  */
 @Path("/users")
 @Consumes({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
-@Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
+@Produces({MediaType.TEXT_XML, MediaType.APPLICATION_JSON})
 public interface UserService {
 
 	@GET
